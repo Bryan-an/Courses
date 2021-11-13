@@ -1,0 +1,30 @@
+body {
+    color: #222;
+    font-family: sans-serif;
+}
+
+.subjects {
+    width: 90%;
+    background: #ccc;
+    padding: 2px;
+    font-size: 20px;
+}
+
+.subject {
+    background: #efefef;
+    display: flex;
+}
+
+.subject div {
+    padding: 20px;
+}
+
+.subject .grade {
+    flex-basis: 20px;
+    background: #ddd;
+    font-weight: 700;
+}
+
+.subject .name {
+    flex-grow: 1;
+}

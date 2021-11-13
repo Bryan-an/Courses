@@ -1,0 +1,122 @@
+body {
+  font-size: 50px;
+  font-family: 'Gluten', cursive;
+}
+
+#role {
+  font-size: 40px;
+  font-family: 'Gluten', cursive;
+  padding: 10px;
+  border: thin solid #999;
+  border-radius: 1rem;
+  color: #29d;
+  text-align: center;
+  width: 50%;
+}
+
+#calculate {
+  font-size: 40px;
+  font-family: 'Gluten', cursive;
+  padding: 10px;
+  border: none;
+  border-radius: 1rem;
+  color: #fff;
+  background: #e82;
+  cursor: pointer;
+}
+
+#calculate:hover {
+  background: #f82;
+}
+
+#calculate:active {
+  background: #e82;
+  transform: scale(0.95);
+}
+
+p {
+  text-align: center;
+}
+
+form {
+  justify-self: center;
+}
+
+#role::placeholder {
+  color: #99eeff99;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #f32a;
+  color: #fff;
+  text-align: center;
+  text-justify: left;
+  border-radius: 10px;
+  padding: 16px;
+  position: fixed;
+  z-index: 10;
+  right: 10px;
+  top: 10px;
+  font-size: 30px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+  from {
+    right: 0;
+    opacity: 0;
+  }
+
+  to {
+    right: 10px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    right: 10px;
+    opacity: 1;
+  }
+
+  to {
+    right: 0;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    right: 0;
+    opacity: 0;
+  }
+
+  to {
+    right: 10px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    right: 10px;
+    opacity: 1;
+  }
+
+  to {
+    right: 0;
+    opacity: 0;
+  }
+}

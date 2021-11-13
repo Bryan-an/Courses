@@ -1,0 +1,45 @@
+/* .contact-form__h2 {
+    font-size: 10px;
+}
+
+.contact-form {
+    font-size: 20px;
+    background-color: yellow;
+    width: 50vw;
+    height: 50vh;
+}
+
+.contact-form__h2 {
+    background-color: aqua;
+    font-size: 2em;
+    font-family: sans-serif;
+    line-height: 1;
+    font-weight: 700;
+    font-stretch: condensed;
+}
+
+.contact-form__h3 {
+    background-color: orangered;
+    font-size: 2.5em;
+    font-family: 'Original Surfer', cursive;
+    line-height: 2;
+    font-weight: normal;
+    font-stretch: normal;
+} */
+
+* {
+    font-family: 'Lobster', cursive;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+h2 {
+    display: inline;
+    height: 400px;
+    width: 190px;
+}
+
+p {
+    height: 400px;
+    width: 190px;
+}

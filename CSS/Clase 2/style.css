@@ -1,0 +1,29 @@
+.color-red {
+    color: rgb(0, 153, 255);
+}
+
+h1 {
+    color: red;
+}
+
+.color-red {
+    color: greenyellow;
+}
+
+[myAttribute="mine"] {
+    color: rgb(199, 24, 199);
+}
+
+#color-pink {
+    color: rgb(253, 166, 242);
+}
+
+h1 {
+    color: grey !important;
+}
+
+.contact-form__input--active {
+    color: aqua;
+}
+
+/*This a comentary*/

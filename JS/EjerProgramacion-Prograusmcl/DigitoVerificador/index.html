@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta title="Check digit">
+  <meta charset="UTF-8" />
+  <link rel='stylesheet' type='text/css' href='index.css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gluten&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <form>
+      <p>Role: <input type='text' name='role' placeholder='Enter your role' id='role'
+          onkeypress="return isNumberKey(event)">
+      </p>
+      <p><input type='submit' name='calculate' id='calculate' value='Calculate'></p>
+    </form>
+  </div>
+
+  <div class="result">
+    <p class="result__p"></p>
+  </div>
+  <!--Snackbar-->
+  <div id="snackbar">Wrong role!</div>
+
+  <script src=index.js></script>
+</body>
+
+</html>

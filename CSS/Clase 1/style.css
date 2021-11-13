@@ -1,0 +1,35 @@
+* {
+    color: red;
+}
+
+h1 {
+    color: greenyellow;
+}
+
+.title-h2 {
+    color: rgb(0, 217, 255);
+}
+
+#element {
+    color: orangered;
+}
+
+[myAttribute="mine"] {
+    color: yellow;
+}
+
+h2 p {
+    color: rgb(228, 15, 228);
+}
+
+h2 b {
+    color: chocolate;
+}
+
+.h2-class p {
+    color: darkgreen;
+}
+
+#pseudo-class:hover {
+    color: black;
+}

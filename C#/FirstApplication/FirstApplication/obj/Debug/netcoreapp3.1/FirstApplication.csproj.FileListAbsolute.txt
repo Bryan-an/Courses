@@ -1,0 +1,39 @@
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso de C#\FirstApplication\FirstApplication\bin\Debug\netcoreapp3.1\FirstApplication.exe
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso de C#\FirstApplication\FirstApplication\bin\Debug\netcoreapp3.1\FirstApplication.deps.json
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso de C#\FirstApplication\FirstApplication\bin\Debug\netcoreapp3.1\FirstApplication.runtimeconfig.json
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso de C#\FirstApplication\FirstApplication\bin\Debug\netcoreapp3.1\FirstApplication.runtimeconfig.dev.json
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso de C#\FirstApplication\FirstApplication\bin\Debug\netcoreapp3.1\FirstApplication.dll
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso de C#\FirstApplication\FirstApplication\bin\Debug\netcoreapp3.1\FirstApplication.pdb
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso de C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.csprojAssemblyReference.cache
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso de C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.AssemblyInfoInputs.cache
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso de C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.AssemblyInfo.cs
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso de C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.csproj.CoreCompileInputs.cache
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso de C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.dll
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso de C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.pdb
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso de C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.genruntimeconfig.cache
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso_C#\FirstApplication\FirstApplication\bin\Debug\netcoreapp3.1\FirstApplication.exe
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso_C#\FirstApplication\FirstApplication\bin\Debug\netcoreapp3.1\FirstApplication.deps.json
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso_C#\FirstApplication\FirstApplication\bin\Debug\netcoreapp3.1\FirstApplication.runtimeconfig.json
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso_C#\FirstApplication\FirstApplication\bin\Debug\netcoreapp3.1\FirstApplication.runtimeconfig.dev.json
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso_C#\FirstApplication\FirstApplication\bin\Debug\netcoreapp3.1\FirstApplication.dll
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso_C#\FirstApplication\FirstApplication\bin\Debug\netcoreapp3.1\FirstApplication.pdb
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso_C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.csprojAssemblyReference.cache
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso_C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.AssemblyInfoInputs.cache
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso_C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.AssemblyInfo.cs
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso_C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.csproj.CoreCompileInputs.cache
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso_C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.dll
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso_C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.pdb
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\Curso_C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.genruntimeconfig.cache
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\FirstApplication\FirstApplication\bin\Debug\netcoreapp3.1\FirstApplication.exe
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\FirstApplication\FirstApplication\bin\Debug\netcoreapp3.1\FirstApplication.deps.json
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\FirstApplication\FirstApplication\bin\Debug\netcoreapp3.1\FirstApplication.runtimeconfig.json
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\FirstApplication\FirstApplication\bin\Debug\netcoreapp3.1\FirstApplication.runtimeconfig.dev.json
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\FirstApplication\FirstApplication\bin\Debug\netcoreapp3.1\FirstApplication.dll
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\FirstApplication\FirstApplication\bin\Debug\netcoreapp3.1\FirstApplication.pdb
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.csproj.AssemblyReference.cache
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.AssemblyInfoInputs.cache
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.AssemblyInfo.cs
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.csproj.CoreCompileInputs.cache
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.dll
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.pdb
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\FirstApplication\FirstApplication\obj\Debug\netcoreapp3.1\FirstApplication.genruntimeconfig.cache

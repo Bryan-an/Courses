@@ -1,0 +1,16 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-item {
+    background-color: #248;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+}

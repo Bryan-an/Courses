@@ -1,0 +1,52 @@
+* {
+  font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+#submit {
+  background-color: #e42;
+  color: #fff;
+  padding: 0.5rem;
+  margin: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #fa1;
+}
+
+#submit:hover {
+  background-color: #d20;
+}
+
+#submit:active {
+  transform: scale(0.95);
+}
+
+#text {
+  border: none;
+  width: 250px;
+  padding: 0.5rem;
+}
+
+#text:focus {
+  outline: 2px solid #bbb;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#instruction {
+  display: block;
+}
+
+#result {
+  text-align: center;
+}

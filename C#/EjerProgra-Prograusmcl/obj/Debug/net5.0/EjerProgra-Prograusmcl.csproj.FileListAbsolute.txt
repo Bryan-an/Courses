@@ -1,0 +1,16 @@
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\EjerProgra-Prograusmcl\obj\Debug\net5.0\EjerProgra-Prograusmcl.csprojAssemblyReference.cache
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\EjerProgra-Prograusmcl\obj\Debug\net5.0\EjerProgra-Prograusmcl.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\EjerProgra-Prograusmcl\obj\Debug\net5.0\EjerProgra-Prograusmcl.AssemblyInfoInputs.cache
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\EjerProgra-Prograusmcl\obj\Debug\net5.0\EjerProgra-Prograusmcl.AssemblyInfo.cs
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\EjerProgra-Prograusmcl\obj\Debug\net5.0\EjerProgra-Prograusmcl.csproj.CoreCompileInputs.cache
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\EjerProgra-Prograusmcl\bin\Debug\net5.0\EjerProgra-Prograusmcl.exe
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\EjerProgra-Prograusmcl\bin\Debug\net5.0\EjerProgra-Prograusmcl.deps.json
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\EjerProgra-Prograusmcl\bin\Debug\net5.0\EjerProgra-Prograusmcl.runtimeconfig.json
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\EjerProgra-Prograusmcl\bin\Debug\net5.0\EjerProgra-Prograusmcl.runtimeconfig.dev.json
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\EjerProgra-Prograusmcl\bin\Debug\net5.0\EjerProgra-Prograusmcl.dll
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\EjerProgra-Prograusmcl\bin\Debug\net5.0\ref\EjerProgra-Prograusmcl.dll
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\EjerProgra-Prograusmcl\bin\Debug\net5.0\EjerProgra-Prograusmcl.pdb
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\EjerProgra-Prograusmcl\obj\Debug\net5.0\EjerProgra-Prograusmcl.dll
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\EjerProgra-Prograusmcl\obj\Debug\net5.0\ref\EjerProgra-Prograusmcl.dll
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\EjerProgra-Prograusmcl\obj\Debug\net5.0\EjerProgra-Prograusmcl.pdb
+C:\Users\bryan\OneDrive\Documentos\Cursos-DESKTOP-1GIT17Q\C#\EjerProgra-Prograusmcl\obj\Debug\net5.0\EjerProgra-Prograusmcl.genruntimeconfig.cache
