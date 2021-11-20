@@ -12,9 +12,17 @@ const router = Router();
 
 /**
  * @swagger
+ * tags:
+ *  name: Tasks
+ *  description: Tasks endpoint
+ */
+
+/**
+ * @swagger
  * /tasks:
  *  get:
  *    summary: Get all tasks
+ *    tags: [Tasks]
  */
 router.get('/tasks', getTasks);
 
@@ -23,6 +31,7 @@ router.get('/tasks', getTasks);
  * /tasks/count:
  *  get:
  *    summary: Get total tasks counter
+ *    tags: [Tasks]
  */
 router.get('/tasks/count', getTaskCount);
 
@@ -31,6 +40,7 @@ router.get('/tasks/count', getTaskCount);
  * /tasks:
  *  get:
  *    summary: Get a task by id
+ *    tags: [Tasks]
  */
 router.get('/tasks/:id', getTask);
 
@@ -39,6 +49,7 @@ router.get('/tasks/:id', getTask);
  * /tasks:
  *  post:
  *    summary: Saave a new task
+ *    tags: [Tasks]
  */
 router.post('/tasks', saveTask);
 
@@ -47,6 +58,7 @@ router.post('/tasks', saveTask);
  * /tasks:
  *  delete:
  *    summary: Delete a task by id
+ *    tags: [Tasks]
  */
 router.delete('/tasks/:id', deleteTask);
 
@@ -55,6 +67,7 @@ router.delete('/tasks/:id', deleteTask);
  * /tasks:
  *  put:
  *    summary: Update a task by id
+ *    tags: [Tasks]
  */
 router.put('/tasks/:id', updateTask);
 

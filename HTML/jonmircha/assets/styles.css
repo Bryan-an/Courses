@@ -1,0 +1,21 @@
+* {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+mark {
+  background-color: #f55;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  color: #9ff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
