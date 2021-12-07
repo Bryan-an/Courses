@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   background-color: #000000;
   color: #ffffff;
@@ -15,7 +19,24 @@ h1 {
   color: #9ff;
 }
 
-img {
+img,
+video {
   max-width: 100%;
   height: auto;
+}
+
+button {
+  background-color: #2ad;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #29d;
+}
+
+iframe {
+  width: 80%;
+  height: 400px;
 }

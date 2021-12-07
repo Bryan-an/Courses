@@ -7,7 +7,7 @@
   }
 } */
 
-const countChars = (text = '') =>
+const countChars = (text = "") =>
   !text
     ? console.warn("You didn't enter a string")
     : console.info(`The string "${text}" has ${text.length} chars`);
@@ -16,7 +16,7 @@ const countChars = (text = '') =>
 // countChars('Hola Mundo');
 
 // ---------------------------------2--------------------------------------------------
-const cutText = (text = '', length = undefined) =>
+const cutText = (text = "", length = undefined) =>
   !text
     ? console.warn("You didn't enter a string")
     : length === undefined
@@ -29,7 +29,7 @@ const cutText = (text = '', length = undefined) =>
 // cutText('', 5);
 
 // --------------------------------------3---------------------------------------------
-const stringToArray = (text = '', separator = undefined) =>
+const stringToArray = (text = "", separator = undefined) =>
   !text
     ? console.warn("You didn't enter a string")
     : separator === undefined
@@ -46,13 +46,13 @@ const stringToArray = (text = '', separator = undefined) =>
 // stringToArray('', '-');
 
 // ------------------------------------4--------------------------------------------------
-const repeatText = (text = '', times = undefined) => {
+const repeatText = (text = "", times = undefined) => {
   if (!text) return console.warn("You didn't enter a text'");
   if (times === undefined)
     return console.warn("You didn't enter the times to repeat the text'");
-  if (times === 0) return console.warn('The times number cannot be zero');
+  if (times === 0) return console.warn("The times number cannot be zero");
   if (Math.sign(times) === -1)
-    return console.warn('The times number cannot be negative');
+    return console.warn("The times number cannot be negative");
 
   for (let i = 1; i <= times; i++) console.info(`${text}, ${i}`);
 };
@@ -64,10 +64,10 @@ const repeatText = (text = '', times = undefined) => {
 // repeatText('Hola Mundo');
 
 // ----------------------------------------5-------------------------------------------
-const reverseText = (text = '') =>
+const reverseText = (text = "") =>
   !text
     ? console.warn("You didn't enter a text'")
-    : console.info(text.split('').reverse().join(''));
+    : console.info(text.split("").reverse().join(""));
 
 // reverseText();
 // reverseText('Hola Mundo');
@@ -77,7 +77,7 @@ const reverseText = (text = '') =>
 // );
 
 // ----------------------------------------6----------------------------------------------
-const textInString = (str = '', text = '') => {
+const textInString = (str = "", text = "") => {
   if (!str) return console.warn("You didn't enter the long text");
   if (!text) return console.warn("You didn't enter the word to evaluate");
 
@@ -104,11 +104,11 @@ const textInString = (str = '', text = '') => {
 // );
 
 // ---------------------------------7----------------------------------------
-const palindrome = (word = '') => {
+const palindrome = (word = "") => {
   if (!word) return console.warn("You didn't enter a word or phrase");
 
   word = word.toLowerCase();
-  let reversed = word.split('').reverse().join('');
+  let reversed = word.split("").reverse().join("");
 
   return word === reversed
     ? console.info(
@@ -124,12 +124,12 @@ const palindrome = (word = '') => {
 // palindrome('SaLas');
 
 // ------------------------------------8---------------------------------------------------
-const deleteChars = (text = '', pattern = '') =>
+const deleteChars = (text = "", pattern = "") =>
   !text
     ? console.warn("You didn't enter a text")
     : !pattern
     ? console.warn("You didn't enter a pattern")
-    : console.log(text.replace(new RegExp(pattern, 'ig'), ''));
+    : console.log(text.replace(new RegExp(pattern, "ig"), ""));
 
 // deleteChars();
 // deleteChars('xyz1, xyz2, xyz3, xyz4 y xyz5');
@@ -148,11 +148,11 @@ const random = () => console.info(Math.round(Math.random() * 100) + 500);
 const capicua = (num = 0) => {
   if (!num) return console.warn("You didn't enter a number");
 
-  if (typeof num !== 'number')
+  if (typeof num !== "number")
     return console.error(`The entered value ${num} is not a number`);
 
   num = num.toString();
-  let reversedNum = num.split('').reverse().join('');
+  let reversedNum = num.split("").reverse().join("");
 
   return num === reversedNum
     ? console.info(
@@ -175,13 +175,13 @@ const capicua = (num = 0) => {
 const factorial = (num = undefined) => {
   if (!num === undefined) return console.warn("You didn't enter a number");
 
-  if (typeof num !== 'number')
+  if (typeof num !== "number")
     return console.error(`The entered value ${num} is not a number`);
 
   if (num === 0) return console.info(`The factorial of ${num} is 1`);
 
   if (Math.sign(num) === -1)
-    return console.error('The number cannot be negative');
+    return console.error("The number cannot be negative");
 
   let factorial = 1;
 
@@ -199,3 +199,177 @@ const factorial = (num = undefined) => {
 // factorial(-5);
 // factorial(5);
 // factorial(8);
+
+// ---------------------------------------------12----------------------------------------
+const primeNumber = (number = undefined) => {
+  if (number === undefined) return console.warn("You didn't enter a number");
+
+  if (typeof number !== "number")
+    return console.error(`The entered value ${number} is not a number`);
+
+  if (number === 0) return console.error("The number cannot be 0");
+
+  if (number === 1) return console.error("The number cannot be 1");
+
+  if (Math.sign(number) === -1)
+    return console.error("The number cannot be negative");
+
+  let divisible = false;
+
+  for (let i = 2; i < number; i++) {
+    if (number % i === 0) {
+      divisible = true;
+      break;
+    }
+  }
+
+  return divisible
+    ? console.log(`The number ${number} is not prime`)
+    : console.log(`The number ${number} is prime`);
+};
+
+// primeNumber();
+// primeNumber('320');
+// primeNumber(true);
+// primeNumber(0);
+// primeNumber(1);
+// primeNumber(-13);
+// primeNumber(13);
+// primeNumber(200);
+
+// -----------------------------------------13----------------------------------------
+const pairOddNumber = (num = undefined) => {
+  if (num === undefined) return console.warn("You did not enter a number'");
+
+  if (typeof num !== "number")
+    return console.error(`The entered value ${num} is not a number`);
+
+  return num % 2 === 0
+    ? console.info(`The number ${num} is pair`)
+    : console.info(`The number ${num} is odd`);
+};
+
+// pairOddNumber();
+// pairOddNumber('23');
+// pairOddNumber(-398);
+// pairOddNumber(19);
+
+// ----------------------------------------------14----------------------------------------
+const convertDegrees = (degrees = undefined, unit = undefined) => {
+  if (degrees === undefined)
+    return console.warn("You did not enter degrees to convert");
+
+  if (typeof degrees !== "number")
+    return console.error(`The entered value ${degrees} is not a number`);
+
+  if (unit === undefined)
+    return console.warn("You did not enter the kind of degree to convert");
+
+  if (typeof unit !== "string")
+    return console.error(`The entered value ${unit} is not a string`);
+
+  if (unit.length !== 1 || !/(C|F)/.test(unit))
+    return console.warn("The unit value has not beeen recognized");
+
+  if (unit === "C")
+    return console.info(
+      `${degrees}°C = ${Math.round(degrees * (9 / 5) + 32)}°F`
+    );
+  else if (unit === "F")
+    return console.info(
+      `${degrees}°F = ${Math.round((degrees - 32) * (5 / 9))}°C`
+    );
+
+  console.info("Works");
+};
+
+// convertDegrees();
+// convertDegrees('2');
+// convertDegrees(2);
+// convertDegrees(2, true);
+// convertDegrees(2, 'Hola');
+// convertDegrees(2, 'E');
+// convertDegrees(0, 'C');
+// convertDegrees(100, 'C');
+// convertDegrees(32, 'F');
+// convertDegrees(100, 'F');
+
+// --------------------------------------15-------------------------------------------
+const convertBinaryDecimal = (number = undefined, base = undefined) => {
+  if (number === undefined)
+    return console.warn("You did not enter a number to convert");
+
+  if (typeof number !== "number")
+    return console.error(`The entered value ${number} is not a number`);
+
+  if (base === undefined)
+    return console.warn("You did not enter the base to convert");
+
+  if (typeof base !== "number")
+    return console.error(`The entered value ${base} is not a number`);
+
+  if (base === 2) {
+    return console.info(
+      `${number} base ${base} = ${parseInt(number, base)} base 10`
+    );
+  } else if (base === 10) {
+    return console.info(
+      `${number} base ${base} = ${number.toString(2)} base 2`
+    );
+  } else {
+    return console.error("The kind of base to convert is invalid");
+  }
+};
+
+// convertBinaryDecimal();
+// convertBinaryDecimal("2");
+// convertBinaryDecimal(100);
+// convertBinaryDecimal(100, "2");
+// convertBinaryDecimal(100, 2);
+// convertBinaryDecimal(1110010, 2);
+// convertBinaryDecimal(4, 10);
+// convertBinaryDecimal(114, 10);
+// convertBinaryDecimal(114, 3);
+
+// --------------------------------------------15----------------------------------------
+const applyDiscount = (amount = undefined, discount = 0) => {
+  if (amount === undefined) return console.warn("You did not enter the amount");
+
+  if (typeof amount !== "number")
+    return console.error(`The entered value ${amount}, is not a number`);
+
+  if (amount === 0) return console.error("The amount must not be zero");
+
+  if (Math.sign(amount) === -1)
+    return console.error("The amount must not be negative");
+
+  if (typeof discount !== "number")
+    return console.error(`The entered value ${discount}, is not a number`);
+
+  if (Math.sign(discount) === -1)
+    return console.error("The discount must not be negative");
+
+  return console.info(
+    `$${amount} - ${discount}% = $${amount - (amount * discount) / 100}`
+  );
+};
+
+// applyDiscount();
+// applyDiscount("200");
+// applyDiscount(0);
+// applyDiscount(-1000);
+// applyDiscount(1000, "20");
+// applyDiscount(1000, -20);
+// applyDiscount(1000, -20);
+// applyDiscount(1000);
+// applyDiscount(1000, 25);
+
+// ---------------------------------------------17--------------------------------------
+const calculateYears = (date = undefined) => {
+  if (date === undefined) return console.warn("You did not enter the date");
+
+  if (!(date instanceof Date))
+    return console.warn(`The entered value is not a valid date`);
+
+  let date;
+};

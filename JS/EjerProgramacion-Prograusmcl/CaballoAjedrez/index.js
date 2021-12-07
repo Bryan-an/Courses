@@ -2,14 +2,28 @@ const form = document.querySelector('.form');
 const row = document.getElementById('row');
 const column = document.getElementById('column');
 const result = document.getElementById('result');
+const snackbar = document.getElementById('snackbar');
+let timeout = null;
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  calculatePossibleFinalCoordinates(
-    parseInt(row.value),
-    parseInt(column.value)
-  );
+  let rowValue = row.value;
+  let columnValue = column.value;
+
+  if (!/^[1-8]$/.test(rowValue) || !/^[1-8]$/.test(columnValue)) {
+    showSnackbar();
+    return;
+  }
+
+  calculatePossibleFinalCoordinates(parseInt(rowValue), parseInt(columnValue));
 });
+
+function showSnackbar() {
+  snackbar.className = '';
+  clearTimeout(timeout);
+  snackbar.className = 'show';
+  timeout = setTimeout(() => (snackbar.className = ''), 3000);
+}
 
 function calculatePossibleFinalCoordinates(row, column) {
   const twoSteps = [2, -2];
