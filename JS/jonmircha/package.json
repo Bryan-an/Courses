@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node ./exercises/17/code.ts",
+    "start": "ts-node ./exercises/24/code.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -48,9 +48,31 @@ function createFile() {
   readCommands(file);
 }
 
-function openFileInterface() {}
+function openFileInterface() {
+  let file = new Document(dir.getPath());
+  dir.getFilesInDir();
 
-function renderInterface(file, message) {
+  interface.question(Messages.requestFileName, (name) => {
+    if (file.exists(name)) {
+      openFile(file, name);
+    } else {
+      console.log(Messages.fileNotFound);
+      setTimeout(() => {
+        interface.removeAllListeners("line");
+        mainScreen();
+      }, 2000);
+    }
+  });
+}
+
+function openFile(file, name) {
+  file.open(name);
+
+  renderInterface(file);
+  readCommands(file);
+}
+
+function renderInterface(file, message = "") {
   process.stdout.write("\033c");
   file.getName() === ""
     ? console.log("| Untitled |")
@@ -64,4 +86,51 @@ function renderInterface(file, message) {
   console.log(file.getContent());
 }
 
-function readCommands(file) {}
+function readCommands(file) {
+  interface.on("line", (input) => {
+    switch (input.trim()) {
+      case ":sa":
+        saveAs(file);
+        break;
+      case ":q":
+        interface.removeAllListeners("line");
+        mainScreen();
+        break;
+      case ":s":
+        save(file);
+        break;
+
+      default:
+        file.append(input.trim());
+    }
+  });
+}
+
+function saveAs(file) {
+  interface.question(Messages.requestFileName, (name) => {
+    if (file.exists(name)) {
+      console.log(Messages.fileExists);
+      interface.question(Messages.replaceFile, (confirm) => {
+        if (confirm === "y") {
+          file.saveAs(name);
+          renderInterface(file, Messages.fileSaved + "\n");
+        } else {
+          renderInterface(file, Messages.fileNotSaved + "\n");
+        }
+      });
+    } else {
+      // The file does not exist and has to be created
+      file.saveAs(name);
+      renderInterface(file, Messages.fileSaved + "\n");
+    }
+  });
+}
+
+function save(file) {
+  if (file.hasName()) {
+    file.save();
+    renderInterface(file, Messages.fileSaved + "\n");
+  } else {
+    saveAs(file);
+  }
+}

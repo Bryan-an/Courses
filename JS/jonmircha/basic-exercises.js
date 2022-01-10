@@ -371,5 +371,225 @@ const calculateYears = (date = undefined) => {
   if (!(date instanceof Date))
     return console.warn(`The entered value is not a valid date`);
 
-  let date;
+  let todayMinusDate = new Date().getTime() - date.getTime();
+  let yearsInMS = 1000 * 60 * 60 * 24 * 365;
+  let humanYears = Math.floor(todayMinusDate / yearsInMS);
+
+  return Math.sign(humanYears) === -1
+    ? console.info(
+        `There are ${Math.abs(humanYears)} years to go to ${date.getFullYear()}`
+      )
+    : Math.sign(humanYears) === 1
+    ? console.info(
+        `${humanYears} years have passed since ${date.getFullYear()}`
+      )
+    : console.info(`We are in the current year ${date.getFullYear()}`);
 };
+
+// calculateYears();
+// calculateYears({});
+// calculateYears(false);
+// calculateYears(new Date());
+// calculateYears(new Date(1984, 4, 23));
+// calculateYears(new Date(1884, 4, 23));
+// calculateYears(new Date(2084, 4, 23));
+
+// -----------------------------------------18---------------------------------------------
+const countLetters = (text = "") => {
+  if (!text) return console.warn("You did not enter a string");
+
+  if (typeof text !== "string")
+    return console.error(`The entered value ${text} is not a string`);
+
+  let vowels = 0;
+  let consonants = 0;
+
+  for (let letter of text) {
+    if (/[aeiouáéíóúü]/i.test(letter)) {
+      vowels++;
+    }
+
+    if (/[bcdfghjklmnñpqrstvwxyz]/i.test(letter)) {
+      consonants++;
+    }
+  }
+
+  return console.info({ text, vowels, consonants });
+};
+
+// countLetters();
+// countLetters(3);
+// countLetters("Hola Mundo");
+// countLetters("Ñoño");
+// countLetters(
+//   "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis ipsa obcaecati nobis temporibus. Ut, temporibus in. Quia voluptatum culpa quaerat dolores quisquam praesentium alias! Perspiciatis omnis repellat provident dolore dolorum."
+// );
+
+// ------------------------------------------19-----------------------------------------------------
+const validateName = (name = "") => {
+  if (!name) return console.warn("You did not enter a name");
+
+  if (typeof name !== "string")
+    return console.error(`The entered value ${name} is not a string`);
+
+  let expReg = /^[a-zñáéíóúü\s]+$/gi.test(name);
+
+  return expReg
+    ? console.info(`${name}, si a valid name`)
+    : console.warn(`${name}, is a inavalid name`);
+};
+
+// validateName();
+// validateName(3);
+// validateName("Jonathan MirCha");
+// validateName("Jonathan MirCha, 35");
+// validateName("Jonathan MirCha,");
+
+// -----------------------------------------------20--------------------------------------------------
+const validateEmail = (email = "") => {
+  if (!email) return console.warn("You did not enter an email");
+
+  if (typeof email !== "string")
+    return console.error(`The entered value ${email} is not a string`);
+
+  let expReg =
+    /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/i.test(
+      email
+    );
+
+  return expReg
+    ? console.info(`${email} is a valid email`)
+    : console.warn(`${email} is not a valid email`);
+};
+
+// validateEmail();
+// validateEmail(34);
+// validateEmail("jon,mir,cha@gmail");
+// validateEmail("jonmircha@gmail.com");
+
+// Merge 19, 20
+const validatePattern = (text = "", pattern = undefined) => {
+  if (!text) return console.warn("You did not enter an string to evaluate");
+
+  if (typeof text !== "string")
+    return console.error(`The entered value ${text} is not a string`);
+
+  if (pattern === undefined)
+    return console.warn("You did not enter an pattern to evaluate");
+
+  if (!(pattern instanceof RegExp))
+    return console.error(
+      `The entered value ${pattern} is not a regular expression`
+    );
+
+  let expReg = pattern.test(text);
+
+  return expReg
+    ? console.info(`${text} matches the entered pattern`)
+    : console.warn(`${text} does not matches the entered pattern`);
+};
+
+// validatePattern();
+// validatePattern({});
+// validatePattern("Hello World");
+// validatePattern("Hello World", "hello");
+// validatePattern("Hello World", [1, 2, 3]);
+// validatePattern("Jonathan MirCha", /^[a-zñáéíóúü\s]+$/gi);
+// validatePattern("Jonathan MirCha 19", /^[a-zñáéíóúü\s]+$/gi);
+// validatePattern(
+//   "jonmircha@gmail",
+//   new RegExp(
+//     "^[a-z0-9]+(\\.[_a-z0-9]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,15})$",
+//     "i"
+//   )
+// );
+// validatePattern(
+//   "jonmircha@gmail.com",
+//   new RegExp(
+//     "^[a-z0-9]+(\\.[_a-z0-9]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,15})$",
+//     "i"
+//   )
+// );
+
+// -------------------------------------------------21--------------------------------------------
+const returnSqrt = (arr = undefined) => {
+  if (arr === undefined)
+    return console.warn("You did not enter a numbers array");
+
+  if (!(arr instanceof Array))
+    return console.error("The entered value is not an array");
+
+  if (arr.length === 0) return console.error("The array is empty");
+
+  for (let num of arr) {
+    if (typeof num !== "number")
+      return console.error(`The entered value ${num} is not a number`);
+  }
+
+  const newArr = arr.map((el) => el * el);
+
+  return console.info(`Original array: ${arr},\nSqrt array: ${newArr}`);
+};
+
+// returnSqrt();
+// returnSqrt(true);
+// returnSqrt({});
+// returnSqrt([]);
+// returnSqrt([1, "3", 4, {}]);
+// returnSqrt([1, 4, {}]);
+// returnSqrt([1, 4, 8]);
+
+// -----------------------------------------------22--------------------------------------
+const arrayMinMax = (arr = undefined) => {
+  if (arr === undefined)
+    return console.warn("You did not enter a numbers array");
+
+  if (!(arr instanceof Array))
+    return console.error("The entered value is not an array");
+
+  if (arr.length === 0) return console.error("The array is empty");
+
+  for (let num of arr) {
+    if (typeof num !== "number")
+      return console.error(`The entered value ${num} is not a number`);
+  }
+
+  return console.info(
+    `Original array: ${arr}\nHigher value: ${Math.max(
+      ...arr
+    )},\nLower value: ${Math.min(...arr)}`
+  );
+};
+
+// arrayMinMax();
+// arrayMinMax(false);
+// arrayMinMax([]);
+// arrayMinMax([2, 3, true]);
+// arrayMinMax([1, 4, 5, 99, -60]);
+
+// ----------------------------------------------23-----------------------------------------
+const separatePairOdd = (arr = undefined) => {
+  if (arr === undefined)
+    return console.warn("You did not enter a numbers array");
+
+  if (!(arr instanceof Array))
+    return console.error("The entered value is not an array");
+
+  if (arr.length === 0) return console.error("The array is empty");
+
+  for (let num of arr) {
+    if (typeof num !== "number")
+      return console.error(`The entered value ${num} is not a number`);
+  }
+
+  return console.info({
+    pairs: arr.filter((num) => num % 2 === 0),
+    odds: arr.filter((num) => num % 2 === 1),
+  });
+};
+
+// separatePairOdd();
+// separatePairOdd("hello");
+// separatePairOdd([]);
+// separatePairOdd([2, 4, "j"]);
+// separatePairOdd([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);

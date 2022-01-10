@@ -1,15 +1,15 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 class Directory {
   constructor() {
-    this._dir = 'docs';
+    this._dir = "docs";
     this._path = __dirname;
     this.createDocsDir();
   }
 
   createDocsDir() {
-    this.path = path.join(this._path, this._dir);
+    this._path = path.join(this._path, this._dir);
 
     if (!fs.existsSync(this._dir)) {
       fs.mkdirSync(this._dir);
@@ -22,7 +22,7 @@ class Directory {
 
   getShortPath() {
     const paths = path.parse(this._path);
-    let delimiter = '/';
+    let delimiter = "/";
 
     if (paths.dir.indexOf(delimiter) < 0) {
       delimiter = `\\`;
@@ -32,16 +32,16 @@ class Directory {
   }
 
   getFilesInDir() {
-    const files = fs.readirsSync(this._path);
+    const files = fs.readdirSync(this._path);
     let n = 0;
 
     console.log(`
-    ========================================
-    Location: ${this.getShortPath()}
-    ========================================`);
+========================================
+Location: ${this.getShortPath()}
+========================================`);
 
     files.forEach((file) => {
-      if (file !== '.DS_Store') {
+      if (file !== ".DS_Store") {
         console.log(` ${file}`);
         n++;
       }

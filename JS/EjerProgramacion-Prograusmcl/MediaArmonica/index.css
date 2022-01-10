@@ -1,0 +1,46 @@
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+html {
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Shippori Antique B1", sans-serif;
+}
+
+h1 {
+  color: #e67e22;
+}
+
+#main-container {
+  text-align: center;
+}
+
+.container {
+  padding: 0.5em;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+input[type="submit"] {
+  background-color: #5dade2;
+  padding: 0.5rem;
+  color: #ddd;
+  border-width: 0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #5ddde2;
+}
+
+input[type="submit"]:active {
+  transform: scale(0.95);
+}

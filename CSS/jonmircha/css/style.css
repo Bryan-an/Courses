@@ -1,0 +1,96 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+}
+
+* {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*
+Comment in CSS
+css rule consists of two parts
+1) the selector
+2) statement block: {
+  attribute: value;
+  attribute-more-than-2-words: another-value;
+}
+*/
+
+/* They are bad practice becuase they are blocking the time the browser read this instruction */
+@import url("other-sheet.css");
+
+h1 {
+  color: orangered;
+  background-color: black;
+}
+
+/* Links and documentation 
+    https://developer.mozilla.org/es/docs/Web/CSS\
+    https://cssreference.io/ 
+    https://caniuse.com/
+    https://www.w3.org/TR/css-2020/
+    https://codeguide.co/#css-syntax
+*/
+
+/* 
+Basic selectors
+  1)Tags - they are HTML elements
+  2)Identifiers - id atribute - #
+  3)Classes - class atribute - .
+*/
+
+p {
+  color: yellow;
+}
+
+/* Styling with id is an antipattern */
+#paragraph-two {
+  background-color: skyblue;
+}
+
+/* Styling with classes allows us to reuse our CSS code */
+.bg-skyblue {
+  background-color: skyblue;
+}
+
+.bg-steelblue {
+  background-color: steelblue;
+}
+
+.text-20 {
+  font-size: 20px;
+}
+
+.text-32 {
+  font-size: 32px;
+}
+
+.text-white {
+  color: white;
+}
+
+.direct-children > li {
+  background-color: thistle;
+}
+
+.descendant-children b {
+  background-color: thistle;
+  color: #000;
+}
+
+/* The sibling selectors will apply to the elements that are siblings and that are below the reference element.*/
+.siblings-general ~ li {
+  background-color: thistle;
+}
+
+.siblings-adjacent + li {
+  background-color: thistle;
+}

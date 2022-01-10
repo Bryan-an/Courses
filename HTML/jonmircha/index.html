@@ -10,6 +10,22 @@
       name="description"
       content="In this page we're learning the HTML basics with @jonmircha"
     />
+    <link rel="canonical" href="http://yourdomain.com/the-canonical-url" />
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/favicon.png" />
+    <meta name="theme-color" content="#ff6600" />
+    <meta property="og:title" content="Learning HTML" />
+    <meta
+      property="og:description"
+      content="In this page we're learning the HTML basics with @jonmircha"
+    />
+    <meta
+      property="og:image"
+      content="https://yourdomain.com/img/periodic-table-of-html-elements.png"
+    />
+    <meta property="og:url" content="http://yourdomain.com/index.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@jonmircha" />
     <style>
       h2 {
         color: tomato;
@@ -60,6 +76,9 @@
       <li><a href="index.html#audio-video">Audio and Video</a></li>
       <li><a href="index.html#iframes">Iframes</a></li>
       <li><a href="index.html#forms">Forms</a></li>
+      <li><a href="index.html#data-attributes">Data Attributes</a></li>
+      <li><a href="index.html#metas-seo">Meta tags for SEO</a></li>
+      <li><a href="index.html#web-accessibility">Web Accessibility</a></li>
       <li><a href="index.html#"></a></li>
     </ul>
     <hr />
@@ -682,14 +701,152 @@
     <h3>Forms Example</h3>
     <h4>Log In Form</h4>
     <form action="https://jonmircha.com" method="POST" autocomplete="off">
-      <input type="text" name="user" />
+      <label for="user">User:</label>
+      <input
+        type="text"
+        name="user"
+        id="user"
+        placeholder="Write your user"
+        pattern="^[A-Za-z]+$"
+        title="The field only accepts letters"
+        required
+      />
       <br />
-      <input type="password" name="password" />
+      <!-- <input type="text" name="email" autocomplete="off" />
+      <br /> -->
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Write your password"
+        required
+      />
       <br />
       <input type="submit" />
       <br />
       <input type="reset" />
     </form>
+    <h4>Selects, Radios and Checkbox</h4>
+    <!-- 
+      http://127.0.0.1:5500/index.html?language=fr#forms 
+      http://127.0.0.1:5500/index.html?language=es&language=en&language=fr#forms
+      http://127.0.0.1:5500/index.html?idiom=es&language=on#forms
+      http://127.0.0.1:5500/index.html?idiom=es&language-js=js&language-py=py&language-php=php#forms
+      http://127.0.0.1:5500/index.html?idiom=es&language=js#forms
+      http://127.0.0.1:5500/index.html?idiom=es&language=py&interests=finance&interests=health#forms
+      http://127.0.0.1:5500/index.html?idiom=es&language=py&interests-sports=sports&interests-finance=finance&interests=health&interests=politics&interests=ecology#forms
+      http://127.0.0.1:5500/index.html?idiom=fr&language=py&interests=finance&interests=ecology&terms=on#forms
+    -->
+    <form>
+      <p>Choose your language:</p>
+      <select name="idiom" required>
+        <option value="" selected>Pick a choice</option>
+        <option value="es">Spanish</option>
+        <option value="en">English</option>
+        <option value="fr">French</option>
+        <option value="it">Italian</option>
+        <option value="pt">Portuguese</option>
+      </select>
+      <p>Pick your favorite programming language:</p>
+      <input type="radio" name="language" id="radio-js" value="js" required />
+      <label for="radio-js">JavaScript</label>
+      <input type="radio" name="language" id="radio-py" value="py" checked />
+      <label for="radio-py">Python</label>
+      <input type="radio" name="language" id="radio-php" value="php" />
+      <label for="radio-php">PHP</label>
+      <p>Pick your interests:</p>
+      <label>
+        <input type="checkbox" name="interests" value="sports" />
+        Sports
+      </label>
+      <label>
+        <input type="checkbox" name="interests" value="finance" checked />
+        Finance
+      </label>
+      <label>
+        <input type="checkbox" name="interests" value="health" />
+        Health
+      </label>
+      <label>
+        <input type="checkbox" name="interests" value="politics" />
+        Politics
+      </label>
+      <label>
+        <input type="checkbox" name="interests" value="ecology" checked />
+        Ecology
+      </label>
+      <p>
+        <label>
+          <input type="checkbox" name="terms" required />
+          Do you accept terms and coniditions?
+        </label>
+      </p>
+      <input type="submit" />
+      <input type="reset" />
+    </form>
+    <h4>Contact Form</h4>
+    <!-- https://formsubmit.co/ -->
+    <form action="https://formsubmit.co/bryanandagoya@gmail.com" method="POST">
+      <input
+        type="text"
+        name="name"
+        placeholder="Write your name"
+        pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+        title="Name only accepts letters and blanks"
+        required
+      />
+      <br />
+      <input
+        type="email"
+        name="email"
+        placeholder="Write your email"
+        pattern="^(\w+[\.\-]?){1,}@[a-z]+[\.]\w{2,}$"
+        title="Invalid email format"
+      />
+      <br />
+      <textarea name="comments" cols="30" rows="10" required></textarea>
+      <br />
+      <input type="submit" />
+    </form>
+    <br />
+    <a href="index.html#start">☝️</a>
+    <hr />
+    <h2 id="data-attributes">Data Attributes</h2>
+    <li data-id="1" data-name="spring">Spring</li>
+    <li data-id="2" data-name="summer">Summer</li>
+    <li data-id="3" data-name="fall">Fall</li>
+    <li data-id="4" data-name="winter">Winter</li>
+    <br />
+    <a href="index.html#start">☝️</a>
+    <hr />
+    <h2 id="metas-seo">Meta tags for SEO</h2>
+    <br />
+    <a href="index.html#start">☝️</a>
+    <hr />
+    <h2 id="web-accessibility">Web Accessibility</h2>
+    <h3 role="title">Seasons of the year</h3>
+    <ul role="list">
+      <li tabindex="1" role="listitem">Spring</li>
+      <li tabindex="2" role="listitem">Summer</li>
+      <li tabindex="4" role="listitem">Fall</li>
+      <li tabindex="3" role="listitem">Winter</li>
+    </ul>
+    <!-- "aria" y "wai" son siglas que hacen referencia a accesibilidad -->
+    <a
+      role="link"
+      aria-label="In this link you will find more information about seasons of the year"
+      href="#"
+      target="_blank"
+    >
+      More information...
+    </a>
+    <!-- Websites about accessibility in the web -->
+    <!-- https://web.dev/accessible/ -->
+    <!-- https://html5accessibility.com/ -->
+    <!-- https://www.w3.org/blog/news/archives/8889 -->
+    <!-- https://www.youtube.com/channel/UCU6ljj3m1fglIPjSjs2DpRA -->
+    <br />
     <a href="index.html#start">☝️</a>
     <hr />
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
