@@ -28,6 +28,7 @@
       <ul>
         <li><a href="index.html#basic-selectors">Basic selectors</a></li>
         <li><a href="index.html#advanced-selectors">Advanced Selectors</a></li>
+        <li><a href="index.html#pseudo-classes">Pseudo Classes</a></li>
         <li><a href=""></a></li>
       </ul>
     </article>
@@ -99,16 +100,78 @@
         <li><b>Winter</b></li>
       </ul>
       <h3>Attribute Selectors</h3>
-      <nav>
+      <nav class="selectors-attributes">
         <ul>
-          <li><a href="" target="_blank">Home</a></li>
-          <li><a href="" target="_blank">Courses</a></li>
-          <li><a href="" target="_blank">Blog</a></li>
-          <li><a href="" target="_blank">CV</a></li>
-          <li><a href="" target="_blank">Now</a></li>
-          <li><a href="" target="_blank">Notes</a></li>
+          <li><a href="https://jonmircha.com" target="_blank">Home</a></li>
+          <li>
+            <a
+              class="menu-item courses button"
+              href="https://jonmircha.com/cursos"
+              target="_blank"
+            >
+              Courses
+            </a>
+          </li>
+          <li><a href="http://jonmircha.com/blog" target="_blank">Blog</a></li>
+          <li><a href="https://jonmircha.com/cv" target="_blank">CV</a></li>
+          <li>
+            <a
+              class="menu item now button"
+              href="https://jonmircha.com/ahora"
+              target="_blank"
+            >
+              Now
+            </a>
+          </li>
+          <li>
+            <a
+              class="menu-item notes button"
+              href="http://jonmircha.com/notas"
+              target="_blank"
+            >
+              Notes
+            </a>
+          </li>
+          <li><a href="index.html#css-syllabus">Return to Syllabus</a></li>
         </ul>
       </nav>
+      <h3>Universal Selector (*)</h3>
+      <ul class="universal-selector">
+        <li><b>Spring</b></li>
+        <li><b>Summer</b></li>
+        <li><b>Fall</b></li>
+        <li><b>Winter</b></li>
+      </ul>
+      <a href="index.html#css-syllabus">☝️</a>
+    </article>
+    <hr />
+    <article id="pseudo-classes">
+      <h2>Pseudo Classes</h2>
+      <form class="form-pseudo-classes">
+        <input type="text" name="name" placeholder="Write your name" required />
+        <br />
+        <input
+          type="email"
+          name="email"
+          placeholder="Write your email"
+          required
+        />
+        <br />
+        <input type="submit" />
+        <input type="submit" disabled />
+      </form>
+      <nav class="menu-pseudo-classes">
+        <a href="#section1">Section 1</a>
+        <a href="#section2">Section 2</a>
+        <a href="#section3">Section 3</a>
+        <a href="#section4">Section 4</a>
+      </nav>
+      <p class="p-pseudo-classes">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+        placeat a cumque ullam eaque commodi tenetur ipsa minus impedit
+        dignissimos molestias quas, nostrum dolore modi enim dicta esse odit
+        unde.
+      </p>
       <a href="index.html#css-syllabus">☝️</a>
     </article>
     <hr />

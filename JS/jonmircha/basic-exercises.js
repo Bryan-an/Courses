@@ -593,3 +593,55 @@ const separatePairOdd = (arr = undefined) => {
 // separatePairOdd([]);
 // separatePairOdd([2, 4, "j"]);
 // separatePairOdd([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
+
+// -----------------------------------------------------24----------------------------------------------
+const sortArray = (arr = undefined) => {
+  if (arr === undefined)
+    return console.warn("You did not enter a numbers array");
+
+  if (!(arr instanceof Array))
+    return console.error("The entered value is not an array");
+
+  if (arr.length === 0) return console.error("The array is empty");
+
+  for (let num of arr) {
+    if (typeof num !== "number")
+      return console.error(`The entered value ${num} is not a number`);
+  }
+
+  return console.info({
+    arr,
+    asc: arr.map((el) => el).sort(),
+    desc: arr
+      .map((el) => el)
+      .sort()
+      .reverse(),
+  });
+};
+
+// sortArray();
+// sortArray("Hello");
+// sortArray([]);
+// sortArray([3, {}]);
+// sortArray([7, 5, 7, 8, 6]);
+
+// -----------------------------------------------25--------------------------------------------------
+const removeDuplicates = (arr = undefined) => {
+  if (arr === undefined)
+    return console.warn("You did not enter a numbers array");
+
+  if (!(arr instanceof Array))
+    return console.error("The entered value is not an array");
+
+  if (arr.length === 0) return console.error("The array is empty");
+
+  if (arr.length === 1)
+    return console.warn("The array must have at least two elements");
+
+  return console.info({
+    original: arr,
+    withoutDuplicates: arr.filter(
+      (value, index, self) => self.indexOf(value) === index
+    ),
+  });
+};

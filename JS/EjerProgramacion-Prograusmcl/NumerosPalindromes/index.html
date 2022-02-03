@@ -4,34 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Roboto:wght@300;400&family=Shippori+Antique+B1&display=swap"
+      rel="stylesheet"
+    />
     <title>Palindrome Numbers</title>
   </head>
   <body>
-    <header>
-      <h1>Palindrome Numbers</h1>
-    </header>
-    <main>
-      <section>
-        <article>
-          <form>
-            <table>
-              <tr>
-                <td>
-                  <label for="num">Enter a number</label>
-                </td>
-                <td>
-                  <input type="number" name="num" id="num" required />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <input type="button" value="Imprimir" />
-                </td>
-              </tr>
-            </table>
-          </form>
-        </article>
-      </section>
-    </main>
+    <div class="container d-flex-column">
+      <header class="py-50">
+        <h1 class="text-center">Palindrome Numbers</h1>
+      </header>
+      <main>
+        <section>
+          <article>
+            <form>
+              <div class="text-center d-flex justify-content-center">
+                <table class="table">
+                  <tr>
+                    <td>
+                      <label for="num">Enter a number</label>
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        name="num"
+                        id="num"
+                        required
+                        class="form-input"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <input
+                        id="print"
+                        type="button"
+                        value="Imprimir"
+                        class="btn bg-orange"
+                      />
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </form>
+          </article>
+          <article>
+            <div class="d-flex justify-content-center">
+              <h5 id="result">fdf</h5>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
   </body>
 </html>

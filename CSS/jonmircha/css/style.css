@@ -10,8 +10,8 @@ body {
   color: white;
 }
 
-a {
-  text-decoration: none;
+input {
+  color: black;
 }
 
 /*
@@ -93,4 +93,87 @@ p {
 
 .siblings-adjacent + li {
   background-color: thistle;
+}
+
+/* Attributes selectors */
+.selectors-attributes a[href] {
+  color: orangered;
+}
+
+.selectors-attributes a[target="_blank"] {
+  font-weight: bold;
+}
+
+/* The * wildcard applies the style if it contains the text in question anywhere */
+.selectors-attributes a[href*="jonmircha"] {
+  font-size: 24px;
+}
+
+/* The ^ wildcard applies the style if it contains the text in question at the beggining */
+.selectors-attributes a[href^="http:"] {
+  text-decoration: none;
+}
+
+/* The $ wildcard applies the style if it contains the text in question at the end */
+.selectors-attributes a[href$=".com"] {
+  background-color: white;
+}
+
+/* The ~ wildcard applies the style if it contains the text in question in a space-separating list */
+.selectors-attributes a[class~="courses"] {
+  background-color: steelblue;
+}
+
+/* The | (pipe) wildcard applies the style if it contains the text in question in a space-separating list and a hyphe follow the text in question - */
+.selectors-attributes a[class|="menu"] {
+  font-style: italic;
+}
+
+/* Universal Selector */
+* {
+  font-family: sans-serif;
+}
+
+.universal-selector * {
+  font-size: 24px;
+}
+
+/* 
+Pseudo classes - Give styles depending on the context, position or state of the element.
+https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
+*/
+.form-pseudo-classes *:required {
+  border-color: yellow;
+}
+
+.form-pseudo-classes *:valid {
+  border-color: green;
+}
+
+.form-pseudo-classes *:invalid {
+  border-color: red;
+}
+
+.form-pseudo-classes *:focus {
+  background-color: skyblue;
+}
+
+.form-pseudo-classes *:disabled {
+  background-color: pink;
+}
+
+.menu-pseudo-classes a:visited {
+  color: olive;
+}
+
+.menu-pseudo-classes a:hover {
+  color: orange;
+}
+
+.p-pseudo-classes:hover {
+  font-size: 20px;
+}
+
+#css-syllabus:target {
+  background-color: lightgreen;
 }
