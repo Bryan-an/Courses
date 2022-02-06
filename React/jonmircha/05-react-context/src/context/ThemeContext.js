@@ -11,7 +11,7 @@ const ThemeProvider = ({ children }) => {
     e.target.value === "light" ? setTheme("light") : setTheme("dark");
   };
 
-  const data = {};
+  const data = { theme, handleTheme };
 
   return <ThemeContext.Provider value={data}>{children}</ThemeContext.Provider>;
 };
