@@ -47,10 +47,6 @@ Basic selectors
   3)Classes - class atribute - .
 */
 
-p {
-  color: yellow;
-}
-
 /* Styling with id is an antipattern */
 #paragraph-two {
   background-color: skyblue;
@@ -177,3 +173,60 @@ https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
 #css-syllabus:target {
   background-color: lightgreen;
 }
+
+.pseudo-classes-list li:first-child {
+  color: green;
+}
+
+.pseudo-classes-list li:last-child {
+  color: violet;
+}
+
+.pseudo-classes-list li:nth-child(3) {
+  color: navy;
+}
+
+.pseudo-classes-list li:nth-child(4n) {
+  font-size: 20px;
+}
+
+.pseudo-classes-list li:nth-child(3n + 1) {
+  font-weight: bold;
+}
+
+.pseudo-classes-list li:nth-child(even) {
+  background-color: yellow;
+  color: #aaa;
+}
+
+.pseudo-classes-list li:nth-child(odd) {
+  background-color: orange;
+  color: #aaa;
+}
+
+.article-pseudo-classes p:first-of-type {
+  background-color: pink;
+}
+
+.article-pseudo-classes p:last-of-type {
+  background-color: violet;
+}
+
+.article-pseudo-classes p:nth-of-type(3) {
+  background-color: fuchsia;
+}
+
+/* .article-pseudo-classes *:not(p, .button, .list, #one) {
+  background-color: beige;
+  color: black;
+} */
+
+.article-pseudo-classes *:not(p) {
+  background-color: beige;
+  color: black;
+}
+
+/* 
+Pseudo-elements - They give styles to specific parts of an element, the :: is used to differentiate them from pseudo classes. 
+https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements
+*/

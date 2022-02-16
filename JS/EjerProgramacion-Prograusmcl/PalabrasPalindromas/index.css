@@ -1,0 +1,19 @@
+* {
+  font-family: "Mochiy Pop P One";
+}
+
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+#main-container {
+  background-color: #aaa;
+}
+
+.form-container {
+  background-color: #f9e79f;
+}
+
+.label-container {
+}

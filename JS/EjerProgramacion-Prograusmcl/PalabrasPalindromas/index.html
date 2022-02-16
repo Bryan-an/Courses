@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Roboto:wght@300;400&family=Shippori+Antique+B1&display=swap"
+      rel="stylesheet"
+    />
+    <title>Palindrome Words</title>
+  </head>
+  <body>
+    <div class="d-flex-column" id="main-container">
+      <div class="header-container">
+        <h1>Palindrome Words</h1>
+      </div>
+      <div class="form-container">
+        <form id="form">
+          <div class="label-container">
+            <label for="word">Enter a world</label>
+          </div>
+          <div class="input-container">
+            <input
+              type="text"
+              name="word"
+              id="word"
+              required
+              pattern="^[a-zA-Z]+$"
+              title="Enter a word"
+            />
+          </div>
+          <div class="submit-container">
+            <input type="submit" value="Send" />
+          </div>
+        </form>
+      </div>
+      <div class="result-container">
+        <h4 id="result">This is the result</h4>
+      </div>
+    </div>
+  </body>
+</html>

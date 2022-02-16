@@ -638,10 +638,55 @@ const removeDuplicates = (arr = undefined) => {
   if (arr.length === 1)
     return console.warn("The array must have at least two elements");
 
-  return console.info({
+  /* return console.info({
     original: arr,
     withoutDuplicates: arr.filter(
       (value, index, self) => self.indexOf(value) === index
     ),
+  }); */
+
+  return console.info({
+    original: arr,
+    withoutDuplicates: [...new Set(arr)],
   });
 };
+
+// removeDuplicates();
+// removeDuplicates({});
+// removeDuplicates([]);
+// removeDuplicates([2]);
+// removeDuplicates(["x", 10, "x", "10", 10, true, true]);
+
+// --------------------------------------------26----------------------------------------
+const average = (arr = undefined) => {
+  if (arr === undefined)
+    return console.warn("You did not enter a numbers array");
+
+  if (!(arr instanceof Array))
+    return console.error("The entered value is not an array");
+
+  if (arr.length === 0) return console.error("The array is empty");
+
+  for (let num of arr) {
+    if (typeof num !== "number")
+      return console.error(`The entered value ${num} is not a number`);
+  }
+
+  return console.info(
+    arr.reduce((total, num, index, arr) => {
+      total += num;
+
+      if (index === arr.length - 1) {
+        return `The average of ${arr.join(" + ")} is ${total / arr.length}`;
+      } else {
+        return total;
+      }
+    })
+  );
+};
+
+average();
+average({});
+average([]);
+average([2, true]);
+average([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
