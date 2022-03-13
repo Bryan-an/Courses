@@ -1,0 +1,29 @@
+package es.pildoras.spring.mvc;
+
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@org.springframework.stereotype.Controller
+@RequestMapping("/secondary")
+public class ThrowController {
+
+	@RequestMapping("/showForm")
+	public String showForm() { // Provide the form
+		return "HelloStudentsForm";
+	}
+
+	@RequestMapping("/processForm2")
+//	public String anotherProcessForm(HttpServletRequest request, Model model) {
+	public String anotherProcessForm(@RequestParam("studentName") String name, Model model) {
+
+//		String name = request.getParameter("studentName");
+		name += " is the worst student";
+		String finalMessage = "Who is the worst student? " + name;
+
+		// Adding info to the model
+		model.addAttribute("clearMessage", finalMessage);
+
+		return "HelloStudentsSpring";
+	}
+}

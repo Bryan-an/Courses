@@ -10,7 +10,7 @@ public class GuessNumber {
 		int number = 0;
 		int attempts = 0;
 
-		while (number != random) {
+		do {
 			attempts++;
 			System.out.println("Enter a number, please");
 			number = input.nextInt();
@@ -20,7 +20,7 @@ public class GuessNumber {
 			} else if (random > number) {
 				System.out.println("Higher");
 			}
-		}
+		} while (number != random);
 
 		System.out.println("Correct. You have achieve it in " + attempts + " attempts");
 	}

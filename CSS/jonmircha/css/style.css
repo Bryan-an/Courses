@@ -1,3 +1,5 @@
+@import url("other-sheet.css");
+
 html {
   scroll-behavior: smooth;
 }
@@ -25,8 +27,6 @@ css rule consists of two parts
 */
 
 /* They are bad practice becuase they are blocking the time the browser read this instruction */
-@import url("other-sheet.css");
-
 h1 {
   color: orangered;
   background-color: black;
@@ -229,4 +229,76 @@ https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
 /* 
 Pseudo-elements - They give styles to specific parts of an element, the :: is used to differentiate them from pseudo classes. 
 https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements
+*/
+
+.saga-gemini::before {
+  content: "👨🏼‍🤝‍👨🏼";
+}
+
+.saga-gemini::after {
+  content: "😎";
+}
+
+.saga-price::before {
+  content: "$";
+  font-weight: bold;
+}
+
+.saga-price::after {
+  content: "USD";
+  font-weight: bold;
+}
+
+.p-pseudo-elements::first-letter {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.p-pseudo-elements::first-line {
+  color: coral;
+}
+
+.p-pseudo-elements::selection {
+  color: greenyellow;
+  background-color: #333;
+}
+
+.input-pseudo-element::placeholder {
+  color: yellowgreen;
+}
+
+/* Group Selectors */
+.form-group-selectors input[type="text"],
+.form-group-selectors input[type="email"],
+.form-group-selectors textarea {
+  border-color: yellow;
+  border-width: 2px;
+  border-style: dashed;
+  background-color: black;
+  font-size: 20px;
+  display: block;
+  width: 300px;
+}
+
+/* CSS Algorithm: It is the browser's way of applying styles to the HTML document. It is vital to understand this concept so that you understand how CSS rules are applied and sometimes overridden. 
+  1) Cascade
+  2) Specificity
+  3) Inheritance
+
+Cascade is the mechanism by which the browser applies styles.
+And take into account the following in this order:
+  1) The code origin:
+    - User Agent (the browser default styles)
+    - User customization
+    - Author styles
+  2) The Selector Specificity
+  3) Appearance order
+
+Specificity is the selector weight when there is a styles conflict.
+It's calculated by follow way:
+  Tags and pseudoelements---------------------------0,0,0,1
+  Classes, atributes and pseudoclasses--------------0,0,1,0
+  Identifiers---------------------------------------0,1,0,0
+  Inline styles-------------------------------------1,0,0,0
+  !important--------------------------Break the specificity
 */
