@@ -1,2 +1,0 @@
-This is the content of a text
-Another code line go here
