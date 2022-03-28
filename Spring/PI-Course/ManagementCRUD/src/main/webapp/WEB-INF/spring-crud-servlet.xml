@@ -15,7 +15,7 @@
 		http://www.springframework.org/schema/tx/spring-tx.xsd">
 
 	<!-- Paquete de escaneo de componentes -->
-	<context:component-scan base-package="pildoras.es.controller" />
+	<context:component-scan base-package="pildoras.es" />
 
 	<!-- Conversión formateo y validación-->
 	<mvc:annotation-driven/>
@@ -62,6 +62,9 @@
     
     <!-- Habilitar configuración de transacciones basadas en anotaciones -->
 	<tx:annotation-driven transaction-manager="myTransactionManager" />
+	
+	<!-- Specify resources directory -->
+	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
 
 </beans>
 
