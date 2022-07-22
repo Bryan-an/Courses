@@ -1,0 +1,16 @@
+src
+|--components                 --> aquí van los componentes compartidos
+|  |--MyComponent
+|  |  |--index.tsx     		--> aquí está el componente en sí
+|  |--index.ts  			--> aquí se exportan todos los componentes
+|
+|--utils            		--> Codigo repetitivo que se utiliza en toda la aplicación.
+|  |--myUtil.ts
+|  |--index.ts      		--> aquí se exportan todos los utils
+|
+|--tests                      --> aquí van todas las pruebas
+|  |--myTest.test.ts          
+|
+|--hooks  				--> aquí van los hooks personalizados
+|  |--useHookName.ts
+|  |--index.ts    		--> aquí se exportan todos los hooks personalizdos

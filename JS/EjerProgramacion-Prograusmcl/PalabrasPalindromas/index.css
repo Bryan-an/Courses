@@ -7,13 +7,75 @@
   flex-direction: column;
 }
 
-#main-container {
-  background-color: #aaa;
-}
-
 .form-container {
-  background-color: #f9e79f;
+  /* background-color: #f9e79f; */
+  display: flex;
+  justify-content: center;
 }
 
-.label-container {
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#form div {
+  /* background-color: #388; */
+  text-align: center;
+  padding: 0.4rem;
+}
+
+.header-container {
+  text-align: center;
+}
+
+#result {
+  text-align: center;
+}
+
+input {
+  border-radius: 15px;
+  outline: none;
+  padding: 0.5rem;
+}
+
+input[type="text"] {
+  min-width: 300px;
+}
+
+input[type="submit"] {
+  background-color: #f85;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes button-hover {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes button-active {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(0.95);
+  }
+}
+
+input[type="submit"]:hover {
+  animation-name: button-hover;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+input[type="submit"]:active {
+  animation-name: button-active;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }

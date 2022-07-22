@@ -685,8 +685,225 @@ const average = (arr = undefined) => {
   );
 };
 
-average();
-average({});
-average([]);
-average([2, true]);
-average([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
+// average();
+// average({});
+// average([]);
+// average([2, true]);
+// average([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
+
+// ----------------------------------------------27----------------------------------------
+class Movie {
+  constructor({ id, title, director, premiere, country, genres, grade }) {
+    this.id = id;
+    this.title = title;
+    this.director = director;
+    this.premiere = premiere;
+    this.country = country;
+    this.genres = genres;
+    this.grade = grade;
+
+    this.validateIMDB(id);
+    this.validateTitle(title);
+    this.validateDirector(director);
+    this.validatePremiere(premiere);
+    this.validateCountry(country);
+    this.validateGenres(genres);
+    this.validateGrade(grade);
+  }
+
+  static get genresList() {
+    return [
+      "Action",
+      "Adult",
+      "Adventure",
+      "Animation",
+      "Biography",
+      "Comedy",
+      "Crime",
+      "Documentary ",
+      "Drama",
+      "Family",
+      "Fantasy",
+      "Film Noir",
+      "Game-Show",
+      "History",
+      "Horror",
+      "Musical",
+      "Music",
+      "Mystery",
+      "News",
+      "Reality-TV",
+      "Romance",
+      "Sci-Fi",
+      "Short",
+      "Sport",
+      "Talk-Show",
+      "Thriller",
+      "War",
+      "Western",
+    ];
+  }
+
+  static allowedGenres() {
+    return console.log(`The allowed genres are: ${Movie.genresList.join(",")}`);
+  }
+
+  validateString(property, value) {
+    if (!value) return console.warn(`${property} ${value} is empty`);
+
+    if (typeof value !== "string")
+      return console.error(`${property} "${value}" entered isn't a string`);
+
+    return true;
+  }
+
+  validateStringLength(property, value, length) {
+    if (value.length > length)
+      return console.error(
+        `${property} "${value}" exceeds the number of characters allowed (${length}).`
+      );
+
+    return true;
+  }
+
+  validateNumber(property, value) {
+    if (!value) return console.warn(`${property} "${value}" is empty`);
+
+    if (typeof value !== "number")
+      return console.error(`${property} "${value}" entered is not a number`);
+
+    return true;
+  }
+
+  validateArray(property, value) {
+    if (!value) return console.warn(`${property} "${value}" is empty`);
+
+    if (!(value instanceof Array))
+      return console.error(`${property} "${value}" entered is not an array`);
+
+    if (value.length === 0)
+      return console.error(`${property} "${value}" doesn't have data`);
+
+    for (let string of value) {
+      if (typeof string !== "string")
+        return console.error(`The value "${string}" entered, is not a string`);
+    }
+
+    return true;
+  }
+
+  validateIMDB(id) {
+    if (this.validateString("IMDB id", id)) {
+      if (!/^([a-z]){2}([0-9]){7}$/.test(id)) {
+        return console.error(
+          `IMDB id "${id}" is invalid, it must have 9 characters, the first 2 lowercase, the remaining 7 numbers`
+        );
+      }
+    }
+  }
+
+  validateTitle(title) {
+    if (this.validateString("Title", title)) {
+      this.validateStringLength("Title", title, 100);
+    }
+  }
+
+  validateDirector(director) {
+    if (this.validateString("Director", director)) {
+      this.validateStringLength("Director", director, 50);
+    }
+  }
+
+  validatePremiere(premiere) {
+    if (this.validateNumber("Premier", premiere)) {
+      if (!/^([0-9]){4}$/.test(premiere)) {
+        return console.error(
+          `Premiere "${premiere}" is invalid, it must be a number of 4 digits.`
+        );
+      }
+    }
+  }
+
+  validateCountry(country) {
+    this.validateArray("Country", country);
+  }
+
+  validateGenres(genres) {
+    if (this.validateArray("Genres", genres)) {
+      for (let genre of genres) {
+        // console.log(genre, Movie.genresList.includes(genre));
+        if (!Movie.genresList.includes(genre)) {
+          console.error(`Invalid genre(s) "${genres.join(",")}"`);
+          Movie.allowedGenres();
+          break;
+        }
+      }
+    }
+  }
+
+  validateGrade(grade) {
+    if (this.validateNumber("Grade", grade)) {
+      return grade < 0 || grade > 10
+        ? console.error(`The grade must be between 0 and 10`)
+        : (this.grade = grade.toFixed(1));
+    }
+  }
+
+  dataSheet() {
+    console.info(
+      `Data sheet:\nTitle: "${this.title}"\nDirector: "${
+        this.director
+      }"\nYear: "${this.premiere}"\nCountry: "${
+        this.country
+      }"\nGenres: "${this.genres.join(",")}"\nGrade: "${
+        this.grade
+      }"\nIMDB id: "${this.id}"`
+    );
+  }
+}
+
+// Movie.allowedGenres();
+
+// const movie = new Movie({
+//   id: "tt1234567",
+//   title: "Movie title",
+//   director: "Movie director",
+//   premiere: 2020,
+//   country: ["Mexico"],
+//   genres: ["Comedy", "Sport"],
+//   grade: 7.789,
+// });
+
+// movie.dataSheet();
+
+const moviesData = [
+  {
+    id: "fd1234567",
+    title: "title 1",
+    director: "director 1",
+    premiere: 2003,
+    country: ["contry1", "contry2", "country3"],
+    genres: ["Action", "Comedy", "Adult"],
+    grade: 4,
+  },
+  {
+    id: "fd1234567",
+    title: "title 2",
+    director: "director 2",
+    premiere: 2003,
+    country: ["contry1", "contry2", "country3"],
+    genres: ["Action", "Comedy", "Adult"],
+    grade: 10,
+  },
+  {
+    id: "fd1234567",
+    title: "title 3",
+    director: "director 3",
+    premiere: 2020,
+    country: ["contry1", "contry2", "country3"],
+    genres: ["Action", "Comedy", "Adult"],
+    grade: 7,
+  },
+];
+
+// moviesData.forEach((el) => new Movie(el).dataSheet());
