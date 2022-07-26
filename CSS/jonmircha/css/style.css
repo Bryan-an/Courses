@@ -302,3 +302,40 @@ It's calculated by follow way:
   Inline styles-------------------------------------1,0,0,0
   !important--------------------------Break the specificity
 */
+
+blockquote#cite-marco.cite-marco {
+  background-color: lightsteelblue;
+}
+
+blockquote {
+  background-color: burlywood;
+  color: black;
+}
+
+blockquote cite {
+  color: inherit;
+}
+
+#cite-marco {
+  background-color: lightgreen;
+}
+
+blockquote.cite-marco {
+  background-color: tomato;
+}
+
+.cite-marco {
+  background-color: cornflowerblue;
+}
+
+.cite-marco {
+  background-color: mediumaquamarine !important;
+}
+
+blockquote#cite-marco {
+  background-color: lightsalmon;
+}
+
+.cite-marco {
+  background-color: moccasin !important;
+}
