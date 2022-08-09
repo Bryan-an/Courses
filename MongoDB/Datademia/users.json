@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Juan",
+    "lastNames": "Gonzalez",
+    "age": 25,
+    "registered": true,
+    "address": {
+      "city": "Barcelona"
+    }
+  },
+  {
+    "name": "Felipe",
+    "lastNames": "Sanchez",
+    "age": 27,
+    "registered": false,
+    "address": {
+      "city": "Madrid"
+    }
+  }
+]
