@@ -50,22 +50,3 @@ class ElectricVehicle(Vehicle):
 
     def load_energy(self):
         self.loading = True
-
-
-my_motorcycle = Motorcycle("Honda", "CBR")
-my_motorcycle.wheelie()
-my_motorcycle.state()
-
-print("------------------------------------------")
-
-my_van = Van("Renault", "Kangoo")
-my_van.start_up()
-my_van.state()
-print(my_van.carry(True))
-
-
-class ElectricBike(ElectricVehicle, Vehicle):
-    pass
-
-
-my_bike = ElectricBike("Orbea", "hj")
