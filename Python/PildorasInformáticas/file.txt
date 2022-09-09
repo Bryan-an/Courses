@@ -1,0 +1,3 @@
+Text starto study Python
+This line has been included from out
+it's always a good moment to study Python

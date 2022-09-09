@@ -1,0 +1,9 @@
+setup.py
+calculations/__init__.py
+calculations/general_calculations.py
+calculations/round_pow/__init__.py
+calculations/round_pow/round_and_pow.py
+calculationspackage.egg-info/PKG-INFO
+calculationspackage.egg-info/SOURCES.txt
+calculationspackage.egg-info/dependency_links.txt
+calculationspackage.egg-info/top_level.txt

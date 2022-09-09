@@ -3,13 +3,20 @@ import {
   AuthenticationError,
   gql,
   UserInputError,
+  PubSub,
 } from "apollo-server";
 import "./db.js";
 import Person from "./models/person.js";
 import User from "./models/user.js";
 import jwt from "jsonwebtoken";
 
+const pubsub = new PubSub();
+
 const JWT_SECRET = "HERE_YOUR_SECRET_WORD_TO_GENERATE_SECURE_TOKENS_OK_TWITCH";
+
+const SUBSCRIPTION_EVENTS = {
+  PERSON_ADDED: "PERSON_ADDED",
+};
 
 const typeDefs = gql`
   enum YesNo {
@@ -58,6 +65,10 @@ const typeDefs = gql`
     login(username: String!, password: String!): Token
     addAsFriend(name: String!): User
   }
+
+  type Subscription {
+    personAdded: Person!
+  }
 `;
 
 const resolvers = {
@@ -95,6 +106,7 @@ const resolvers = {
         });
       }
 
+      pubsub.publish(SUBSCRIPTION_EVENTS.PERSON_ADDED, { personAdded: person });
       return person;
     },
     editNumber: async (root, args) => {
@@ -163,6 +175,11 @@ const resolvers = {
         street: root.street,
         city: root.city,
       };
+    },
+  },
+  Subscription: {
+    personAdded: {
+      subscribe: () => pubsub.asyncIterator(SUBSCRIPTION_EVENTS.PERSON_ADDED),
     },
   },
 };
