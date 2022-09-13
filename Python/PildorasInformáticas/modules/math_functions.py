@@ -1,3 +1,6 @@
+"""This module allows to perform basic math operations"""
+
+
 def sum(op1, op2):
     print(f"The result of the sum is {op1 + op2}")
 
